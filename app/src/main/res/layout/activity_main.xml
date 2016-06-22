@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout">
+
+    <!--Content main layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentMain"
+        android:text="Main layout"
+        android:background="#9dfc7e"></RelativeLayout>
+    <!--Sliding menu-->
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:id="@+id/slidingMenu"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/subSlidingMenu"
+            android:background="@color/colorMenuHead"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:drawable/ic_menu_myplaces"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblUserNameMenu"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblEmailMenu"
+                android:textSize="14sp"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lvSlidingMenu"
+            android:background="@color/colorMenuBody"
+            android:choiceMode="singleChoice"
+            android:padding="16dp"></ListView>
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
